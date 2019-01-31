@@ -7,17 +7,23 @@
   </head>
   <body>
     <div id="root">
-      <h1>La casa de los Secretos</h1>
-      <p>Aquí podras cifrar tus secretos y también decifrar los secretos de alguien más </p>
+      <h1 id = 'titulo'>La casa de los Secretos</h1>
+      <p id='instruccion'>Aquí podras cifrar tus secretos
+        y también descifrar los secretos de alguien más </p>
       <h2>CLAVE DE CIFRADO </h2>
-      <textarea name="claveCifrado" rows="1" cols="4">clave</textarea>
-      <p> Deposita tu secreto aquí </p>
-<textarea name="claveCifrado" rows="10" cols="40">Mi secreto es: </textarea>
-<button> 🔒 </button>
-<button> 🔓 </button>
-<button> 🤔 </button>
+      <input id="claveCifrado"type="text" size="3"/>
+      <p> Deposita tu secreto aquí: </p>
+      <textarea id="input" rows="10" cols="40">Mensaje: </textarea>
+      <p id='output'> Tu secreto es: </p>
+      <br>
+      <button id='bEncode'=  onclick="getInput();"> 🔒 </button>
+      <button id='bDecode'=  onclick="desencriptar(this)"> 🔓 </button>
+      <br>
+      <button id='bInfo'> 🤔 </button>
 
     </div>
+
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
