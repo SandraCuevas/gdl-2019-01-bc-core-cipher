@@ -1,45 +1,52 @@
-window.cipher ={
+  window.cipher ={
 
-encode (offset, msgInput){
-//declaro el alfabeto
-  let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  //para saber el largo del alfabeto
-  let alphabetSize = alphabet.length;
-  //aquí se va ir generarndo el mensaje codificado
-  let msgEncode='';
-  //para codificar el mensaje que ingresa el usuario
-  //donde i=0 es la posición de inicio, i es el lugar donde se encuentra
-  for (let i=0; i<= msgInput.lenght-1; i++);
-  if (msgInput[1]==''){
-    msgEncode += '';
+    encode: function (offset, msgInput){
+        let msgEncode='';
+       //declaro el alfabeto
+         let letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         //para saber el largo del alfabeto
+         let cuantasLetras = letras.length;
 
-  let position = (msgInput.charCodeAt(i)-'A'.charCodeAt(0)+offset)%alphabetSize;
-  msgEncode += alphabet[position];
-    }
-return msgEncode;
+         //para codificar el mensaje que ingresa el usuario
+         //donde i=0 es la posición de inicio, i es el lugar donde se encuentra
+         //console.log(`La condición Inicial es:  ${0<= msgInput.length-1}`);
+         for (let i=0; i< msgInput.length; i++){
+           //console.log(`En la iteración ${i}   msgInput:  ${msgInput}`);
+           if (msgInput[i] == ' '){
+             msgEncode += ' ';
+           }
+           else {
+             let poSwitch = (msgInput.charCodeAt(i)-'A'.charCodeAt(0)+offset)%cuantasLetras;
+             msgEncode += letras[poSwitch];
+         }
+           //console.log('encode',msgEncode);
+         }
+         return msgEncode;
+       },
 
-},
+       decode: function (offset, msgInput){
+           let msgDecode='';
+          //declaro el alfabeto
+            let letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            //para saber el largo del alfabeto
+            let cuantasLetras = letras.length;
 
-decode (offset, msgInput){
-   //declaro el alfabeto
-     let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-     //para saber el largo del alfabeto
-     let alphabetSize = alphabet.length;
-     //aquí se va ir generarndo el mensaje codificado
-     let msgEncode='';
+            //para codificar el mensaje que ingresa el usuario
+            //donde i=0 es la posición de inicio, i es el lugar donde se encuentra
+            //console.log(`La condición Inicial es:  ${0<= msgInput.length-1}`);
+            for (let i=0; i< msgInput.length; i++){
+              //console.log(`En la iteración ${i}   msgInput:  ${msgInput}`);
+              if (msgInput[i]==' '){
+                msgDecode += ' ';
+              }
+              else {
+              let poSwitch = (msgInput.charCodeAt(i)-'A'.charCodeAt(0)-offset)%cuantasLetras;
+              msgDecode += letras[poSwitch];
+              //console.log('encode',msgEncode);
+            }
+            }
+            return msgDecode;
+          }
 
-     //para codificar el mensaje que ingresa el usuario
-     //donde i=0 es la posición de inicio, i es el lugar donde se encuentra
-     for (let i=0; i<= msgInput.lenght-1; i++);
-     if (msgInput[1]==''){
-       msgEncode += '';
 
-     let position = (msgInput.charCodeAt(i)-'A'.charCodeAt(0)+offset)%alphabetSize;
-
-     msgEncode += alphabet[position];
 }
-     }
-   return msgEncode
-
-      }
-};
