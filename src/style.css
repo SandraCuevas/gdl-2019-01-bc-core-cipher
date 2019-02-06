@@ -1,12 +1,22 @@
+
 body {
   background-color: black;
+  display: flex;
+  justify-content: center;
+
 }
 h1 {
   color: white;
+  text-align: center;
+
 }
 p{
   color: grey;
 }
-h2 {
+p #offset {
   color: white;
+  font-size: 20
+}
+button #bEncode  {
+  font-size: 20
 }

@@ -40,7 +40,7 @@
                 msgDecode += ' ';
               }
               else {
-              let poSwitch = (msgInput.charCodeAt(i)-'A'.charCodeAt(0)-offset)%cuantasLetras;
+              let poSwitch = (msgInput.charCodeAt(i)+'A'.charCodeAt(0)-offset)%cuantasLetras;
               msgDecode += letras[poSwitch];
               //console.log('encode',msgEncode);
             }
@@ -49,4 +49,4 @@
           }
 
 
-}
+};
