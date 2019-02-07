@@ -1,22 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Nosifer|Poiret+One');
 
 body {
+  background-image:url(http://www.samirasoledad.com/wp-content/uploads/2018/11/La-maldición-de-hill-house-The-Haounting-of-Hill-House.jpg);
   background-color: black;
   display: flex;
   justify-content: center;
 
 }
+
+div {
+  align-items: center;
+}
+
 h1 {
   color: white;
   text-align: center;
+  font-family: 'Nosifer', cursive;
+  font-size: 40px;
+
 
 }
 p{
   color: grey;
+  font-family:'Poiret One', cursive;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
-p #offset {
+#titOffset {
   color: white;
-  font-size: 20
+  font-size: 15px;
 }
-button #bEncode  {
-  font-size: 20
+textarea {
+   background-color: transparent;
+   color: white;
+   font-family: 'Anonymous Pro', monospace;
+   font-size: 20px;
+}
+
+#recuadros {
+  display: flex;
+  justify-content: center;
+}
+#aclaracion {
+  color: white;
+  font-size: 15px;
+}
+#recuerda {
+  color: white;
+  font-size: 15px;
+}
+
+#botones {
+  display: flex;
+  justify-content: center;
+
+}
+button {
+    background-color: black;
+}
+
+span.emoji {
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+#info {
+  display: flex;
+  justify-content: center;
 }
