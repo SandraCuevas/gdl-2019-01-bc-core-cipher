@@ -147,6 +147,9 @@ span.emoji {
 	top:-40px;
 	left:0;
 }
+a {
+  color: #FF0000;
+}
 
 #info {
   display: flex;
